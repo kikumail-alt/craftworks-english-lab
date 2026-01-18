@@ -1,244 +1,173 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { CATEGORY_TO_JSON, type CategoryId } from "@/lib/categories";
+import Link from "next/link";
 
 type Question = {
   id: string;
   sentence: string;
-  choices: [string, string, string, string];
-  // 品詞カテゴリ用：選択肢それぞれの品詞ラベル
-  choicePos?: [string, string, string, string];
-
-  answer: 0 | 1 | 2 | 3;
-  explanation: string;
-  trap: string;
-  difficulty: 1 | 2 | 3;
+  choices: string[];
+  choicePos?: string[];
+  answer: number;
+  explanation?: string;
+  trap?: string;
+  difficulty?: number;
 };
 
-function renderSentence(sentence: string) {
-  // "_____" が太く見えすぎるのを防ぐ（Times系だと強調されがち）
-  const parts = sentence.split("_____");
-  if (parts.length === 1) return sentence;
-
-  return (
-    <>
-      {parts.map((p, i) => (
-        <span key={i}>
-          {p}
-          {i < parts.length - 1 && (
-            <span
-              style={{
-                fontFamily: '"Times New Roman", Times, serif',
-                fontWeight: 400,
-                opacity: 0.6,
-                letterSpacing: "-0.02em",
-                whiteSpace: "nowrap",
-              }}
-              aria-hidden="true"
-            >
-              _____
-            </span>
-          )}
-        </span>
-      ))}
-    </>
-  );
+function getQueryParam(name: string) {
+  if (typeof window === "undefined") return null;
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
 }
 
 export default function QuizPage() {
-  const sp = useSearchParams();
-  const catsParam = sp.get("cats") || "pos";
+  const category = useMemo(() => getQueryParam("cat") ?? "pos", []);
+  const dataUrl = useMemo(() => `/data/questions/${category}.json`, [category]);
 
-  const categoryIds = useMemo(() => {
-    return catsParam
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean) as CategoryId[];
-  }, [catsParam]);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [idx, setIdx] = useState(0);
 
-  // 「品詞」だけ選んだ時だけ、選択肢に品詞ラベルを表示
-  const isPosMode = categoryIds.length === 1 && categoryIds[0] === "pos";
-
-  const [pool, setPool] = useState<Question[]>([]);
-  const [q, setQ] = useState<Question | null>(null);
   const [picked, setPicked] = useState<number | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
-  async function loadPool() {
-    try {
-      setError("");
-      const files = categoryIds.map((id) => CATEGORY_TO_JSON[id]).filter(Boolean);
+  // ✅ streak（連続正解）
+  const [streak, setStreak] = useState(0);
 
-      const results = await Promise.all(
-        files.map(async (path) => {
-          const res = await fetch(path);
-          if (!res.ok) throw new Error(`Cannot load ${path}`);
-          return (await res.json()) as Question[];
-        })
-      );
+  useEffect(() => {
+    let cancelled = false;
 
-      const merged = results.flat();
-      if (merged.length === 0) throw new Error("No questions loaded.");
+    async function load() {
+      try {
+        setError(null);
+        const res = await fetch(dataUrl, { cache: "no-store" });
+        if (!res.ok) throw new Error(`Cannot load ${dataUrl}`);
+        const json = (await res.json()) as Question[];
+        if (!Array.isArray(json) || json.length === 0) throw new Error("No questions found");
 
-      setPool(merged);
-      setPicked(null);
-      setShowAnswer(false);
-      setQ(merged[Math.floor(Math.random() * merged.length)]);
-    } catch (e: any) {
-      setError(e?.message ?? "Unknown error");
-      setPool([]);
-      setQ(null);
+        if (!cancelled) {
+          setQuestions(json);
+          setIdx(0);
+          setPicked(null);
+          setShowAnswer(false);
+          setStreak(0); // カテゴリ読み込み時はリセット（維持したいならこの行を削除）
+        }
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message ?? "Load error");
+      }
+    }
+
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, [dataUrl]);
+
+  const q = questions[idx];
+
+  function onPick(i: number) {
+    if (!q) return;
+    if (showAnswer) return;
+
+    setPicked(i);
+    setShowAnswer(true);
+
+    // ✅ 正誤で streak 更新
+    if (i === q.answer) {
+      setStreak((s) => s + 1);
+    } else {
+      setStreak(0);
     }
   }
 
-  function nextOne() {
-    if (pool.length === 0) return;
+  function next() {
+    if (!questions.length) return;
+    const nextIdx = (idx + 1) % questions.length;
+    setIdx(nextIdx);
     setPicked(null);
     setShowAnswer(false);
-    setQ(pool[Math.floor(Math.random() * pool.length)]);
   }
-
-  function choose(i: number) {
-    if (showAnswer) return;
-    setPicked(i);
-    setShowAnswer(true);
-  }
-
-  useEffect(() => {
-    loadPool();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [catsParam]);
 
   return (
-    <main style={{ maxWidth: 760, margin: "0 auto" }}>
-      <h1 style={{ fontSize: "1.6rem", fontWeight: 700, marginBottom: 10 }}>
-        Quiz
-      </h1>
+    <main className="mx-auto max-w-2xl p-6">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">Quiz</h1>
+          <p className="mt-1 text-sm opacity-80">
+            Category: <span className="font-semibold">{category}</span>
+          </p>
+        </div>
 
-      <p style={{ fontSize: 12, opacity: 0.75, marginTop: 0 }}>
-        カテゴリ: {categoryIds.join(", ")}
-      </p>
+        {/* ✅ 右上に streak */}
+        <div className="text-right">
+          <div className="text-xs opacity-70">Streak</div>
+          <div className="text-2xl font-bold tabular-nums">{streak}</div>
+        </div>
+      </div>
 
-      {error && <p style={{ color: "#ffb4b4" }}>{error}</p>}
+      <div className="mt-4 flex items-center justify-between gap-3">
+        <Link href="/" className="text-sm underline opacity-80 hover:opacity-100">
+          ← Back
+        </Link>
 
-      {!q ? (
-        <p>Loading...</p>
-      ) : (
-        <div style={{ display: "grid", gap: 14 }}>
-          {/* 問題文：大きくクッキリ、TOEICっぽく Times 系 */}
-          <div
-            style={{
-              fontSize: "1.6rem",
-              fontWeight: 400,
-              lineHeight: 1.6,
-              letterSpacing: "0.01em",
-              fontFamily: '"Times New Roman", Times, serif',
-              userSelect: "text",
-            }}
-          >
-            {renderSentence(q.sentence)}
+        {/* ✅ 小さくID */}
+        {q?.id && (
+          <div className="text-xs opacity-60">
+            ID: <span className="font-mono">{q.id}</span>
+          </div>
+        )}
+      </div>
+
+      {error && (
+        <div className="mt-6 rounded-lg border p-4">
+          <p className="text-red-500 font-semibold">Error</p>
+          <p className="mt-2 text-sm opacity-80">{error}</p>
+          <p className="mt-2 text-sm opacity-80">
+            確認：<span className="font-mono">public{dataUrl}</span> が存在するか
+          </p>
+        </div>
+      )}
+
+      {!error && !q && <p className="mt-6 text-sm opacity-80">Loading...</p>}
+
+      {!error && q && (
+        <div className="mt-6 space-y-5">
+          {/* 問題文 */}
+          <div className="rounded-xl border p-5">
+            <p className="text-xl font-semibold leading-relaxed">{q.sentence}</p>
           </div>
 
-          {/* 仕切り（混ざって見えないように） */}
-          <div
-            aria-hidden="true"
-            style={{
-              height: 1,
-              opacity: 0.35,
-              background: "currentColor",
-              borderRadius: 999,
-            }}
-          />
-
-          {/* 選択肢 */}
-          <div className="choices" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          {/* 選択肢（縦並び） */}
+          <div className="grid gap-2">
             {q.choices.map((c, i) => {
               const isCorrect = showAnswer && i === q.answer;
               const isWrong = showAnswer && picked === i && i !== q.answer;
 
-              const cls = [
-                "choice",
-                isCorrect ? "correct" : "",
-                isWrong ? "wrong" : "",
-              ]
-                .filter(Boolean)
-                .join(" ");
-
-              const posLabel = isPosMode ? q.choicePos?.[i as 0 | 1 | 2 | 3] : undefined;
-
               return (
                 <button
                   key={i}
-                  onClick={() => choose(i)}
-                  className={cls}
-                  style={{
-                    display: "flex",
-                    gap: 8,
-                    alignItems: "baseline",
-                    padding: "10px 12px",
-                    borderRadius: 12,
-                    border: "1px solid #666",
-                    background: "transparent",
-                    color: "inherit",
-                    cursor: showAnswer ? "default" : "pointer",
-                    textAlign: "left",
-                  }}
+                  onClick={() => onPick(i)}
+                  className={[
+                    "w-full rounded-xl border px-4 py-3 text-left text-base",
+                    "transition",
+                    "hover:opacity-95",
+                    "disabled:opacity-80 disabled:cursor-not-allowed",
+                    isCorrect ? "border-green-500" : "",
+                    isWrong ? "border-red-500" : "",
+                  ].join(" ")}
+                  disabled={showAnswer}
                 >
-                  {/* A/B/C/D は目立たせない */}
-                  <span
-                    style={{
-                      fontSize: "0.8rem",
-                      opacity: 0.55,
-                      minWidth: "1.4em",
-                      textAlign: "right",
-                      letterSpacing: "0.04em",
-                      fontFamily: "system-ui, sans-serif",
-                      userSelect: "none",
-                    }}
-                    aria-hidden="true"
-                  >
-                    {String.fromCharCode(65 + i)}
+                  {/* A/B/C/D を小さめに */}
+                  <span className="mr-2 text-xs opacity-70">
+                    {String.fromCharCode(65 + i)}.
                   </span>
 
-                  {/* 選択肢本文 + 品詞ラベル */}
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      gap: 10,
-                      alignItems: "baseline",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: '"Times New Roman", Times, serif',
-                        fontSize: "1.1rem",
-                        lineHeight: 1.35,
-                      }}
-                    >
-                      {c}
-                    </span>
+                  <span className="font-medium">{c}</span>
 
-                    {posLabel && (
-                      <span
-                        style={{
-                          fontSize: "0.85rem",
-                          opacity: 0.7,
-                          border: "1px solid currentColor",
-                          borderRadius: 999,
-                          padding: "2px 8px",
-                          lineHeight: 1.2,
-                          fontFamily: "system-ui, sans-serif",
-                        }}
-                        aria-label={`品詞: ${posLabel}`}
-                      >
-                        {posLabel}
-                      </span>
-                    )}
-                  </span>
+                  {/* 品詞ラベル */}
+                  {q.choicePos?.[i] && (
+                    <span className="ml-3 text-sm opacity-75">（{q.choicePos[i]}）</span>
+                  )}
                 </button>
               );
             })}
@@ -246,61 +175,39 @@ export default function QuizPage() {
 
           {/* 解説 */}
           {showAnswer && (
-            <div
-              className="card"
-              style={{
-                border: "1px solid #666",
-                borderRadius: 12,
-                padding: 12,
-              }}
-            >
-              <p style={{ margin: "0 0 6px" }}>
-                {picked === q.answer ? "✅ Correct!" : "❌ Incorrect"}
-              </p>
+            <div className="rounded-xl border p-5 space-y-2">
+              <div className="text-sm">
+                {picked === q.answer ? (
+                  <span className="font-semibold">✅ Correct</span>
+                ) : (
+                  <span className="font-semibold">❌ Incorrect</span>
+                )}
+              </div>
 
-              <p className="explanation" style={{ margin: "4px 0" }}>
-                <strong>Explanation:</strong> {q.explanation}
-              </p>
+              {q.explanation && (
+                <p className="text-sm leading-relaxed opacity-90">
+                  <span className="font-semibold">Explanation: </span>
+                  {q.explanation}
+                </p>
+              )}
 
-              <p className="explanation" style={{ margin: "4px 0" }}>
-                <strong>Trap:</strong> {q.trap}
-              </p>
+              {q.trap && (
+                <p className="text-sm leading-relaxed opacity-85">
+                  <span className="font-semibold">Trap: </span>
+                  {q.trap}
+                </p>
+              )}
+
+              <div className="pt-2">
+                <button
+                  onClick={next}
+                  className="rounded-xl border px-4 py-2 text-sm hover:opacity-95"
+                >
+                  Next
+                </button>
+              </div>
             </div>
           )}
-
-          {/* 次へ */}
-          {showAnswer && (
-            <button
-              onClick={nextOne}
-              style={{
-                alignSelf: "flex-start",
-                padding: "8px 12px",
-                borderRadius: 12,
-                border: "1px solid #666",
-                background: "transparent",
-                color: "inherit",
-                cursor: "pointer",
-              }}
-            >
-              Next question
-            </button>
-          )}
-
-          {/* ✅ ID：邪魔にならない場所（画面下・右寄せ・超薄く） */}
-          <div
-            style={{
-              marginTop: 28,
-              textAlign: "right",
-              fontSize: "0.65rem",
-              opacity: 0.28,
-              letterSpacing: "0.08em",
-              fontFamily: "system-ui, sans-serif",
-              userSelect: "none",
-            }}
-            aria-hidden="true"
-          >
-            {q && `ID: ${q.id}`}
-          </div>
         </div>
       )}
     </main>
