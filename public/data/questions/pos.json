@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "pos-001",
+    "sentence": "The new policy will _____ effective next month.",
+    "choices": [
+      "be",
+      "being",
+      "been",
+      "is"
+    ],
+    "choicePos": [
+      "動詞（原形）",
+      "動名詞/現在分詞",
+      "過去分詞",
+      "be動詞（現在形）"
+    ],
+    "answer": 0,
+    "explanation": "助動詞 will の後ろは動詞の原形。be + 形容詞で状態を表します。",
+    "trap": "is は現在形で will と並べられません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-002",
+    "sentence": "All employees must _____ their ID badges at work.",
+    "choices": [
+      "wear",
+      "wearing",
+      "worn",
+      "wears"
+    ],
+    "choicePos": [
+      "動詞（原形）",
+      "動名詞/現在分詞",
+      "過去分詞",
+      "動詞（三単現）"
+    ],
+    "answer": 0,
+    "explanation": "助動詞 must の後ろは動詞の原形。",
+    "trap": "wears は三単現。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-003",
+    "sentence": "The shipment was _____ yesterday afternoon.",
+    "choices": [
+      "deliver",
+      "delivered",
+      "delivering",
+      "delivery"
+    ],
+    "choicePos": [
+      "動詞（原形）",
+      "過去分詞",
+      "動名詞/現在分詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "be動詞（was）の後ろで受動態なので過去分詞が必要です。",
+    "trap": "delivery は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-004",
+    "sentence": "The report should be _____ by Friday.",
+    "choices": [
+      "submit",
+      "submitted",
+      "submitting",
+      "submission"
+    ],
+    "choicePos": [
+      "動詞（原形）",
+      "過去分詞",
+      "動名詞/現在分詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "should be + 過去分詞で受動態になります。",
+    "trap": "submit は原形で受動態になりません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-005",
+    "sentence": "The meeting room is _____ for maintenance today.",
+    "choices": [
+      "close",
+      "closed",
+      "closing",
+      "closely"
+    ],
+    "choicePos": [
+      "動詞/形容詞",
+      "形容詞（過去分詞）",
+      "動名詞/現在分詞",
+      "副詞"
+    ],
+    "answer": 1,
+    "explanation": "be動詞の後ろは状態（形容詞）。closed（閉鎖された）が自然です。",
+    "trap": "closely は副詞で意味が違います。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-006",
+    "sentence": "Please speak _____ during the presentation.",
+    "choices": [
+      "clear",
+      "clearly",
+      "clarity",
+      "clearness"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "動詞 speak を修飾するのは副詞です。",
+    "trap": "clear は形容詞で名詞を修飾する形。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-007",
+    "sentence": "The instructions were _____ written and easy to follow.",
+    "choices": [
+      "careful",
+      "carefully",
+      "care",
+      "careless"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞/動詞",
+      "形容詞"
+    ],
+    "answer": 1,
+    "explanation": "written（動詞）を修飾するので副詞 carefully が必要です。",
+    "trap": "careful は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-008",
+    "sentence": "The manager was _____ satisfied with the results.",
+    "choices": [
+      "complete",
+      "completely",
+      "completion",
+      "completing"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "動名詞/現在分詞"
+    ],
+    "answer": 1,
+    "explanation": "形容詞 satisfied を修飾するのは副詞 completely。",
+    "trap": "complete は形容詞で修飾先が違います。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-009",
+    "sentence": "The new system operates _____ than the old one.",
+    "choices": [
+      "efficient",
+      "efficiency",
+      "efficiently",
+      "more efficient"
+    ],
+    "choicePos": [
+      "形容詞",
+      "名詞",
+      "副詞",
+      "形容詞（比較）"
+    ],
+    "answer": 2,
+    "explanation": "operates（動詞）を修飾するので副詞 efficiently が自然です。",
+    "trap": "more efficient は形容詞で名詞向き。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-010",
+    "sentence": "Our sales team worked _____ to meet the deadline.",
+    "choices": [
+      "hard",
+      "hardly",
+      "hardness",
+      "harder"
+    ],
+    "choicePos": [
+      "副詞/形容詞",
+      "副詞",
+      "名詞",
+      "副詞/形容詞（比較）"
+    ],
+    "answer": 0,
+    "explanation": "work を修飾するので副詞 hard（熱心に）が正解。",
+    "trap": "hardly は『ほとんど〜ない』で意味が別。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-011",
+    "sentence": "The brochure provides _____ information about the service.",
+    "choices": [
+      "detail",
+      "detailed",
+      "details",
+      "detailing"
+    ],
+    "choicePos": [
+      "名詞/動詞",
+      "形容詞（過去分詞）",
+      "名詞（複数）",
+      "動名詞/現在分詞"
+    ],
+    "answer": 1,
+    "explanation": "information（名詞）を修飾するので形容詞 detailed。",
+    "trap": "details は名詞で形が合いません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-012",
+    "sentence": "The assistant answered the phone _____ .",
+    "choices": [
+      "polite",
+      "politely",
+      "politeness",
+      "politest"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "形容詞（最上級）"
+    ],
+    "answer": 1,
+    "explanation": "answered（動詞）を修飾する副詞 politely。",
+    "trap": "polite は形容詞で名詞向き。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-013",
+    "sentence": "The conference room was _____ quiet during the session.",
+    "choices": [
+      "surprise",
+      "surprising",
+      "surprised",
+      "surprisingly"
+    ],
+    "choicePos": [
+      "名詞/動詞",
+      "形容詞（現在分詞）",
+      "形容詞（過去分詞）",
+      "副詞"
+    ],
+    "answer": 3,
+    "explanation": "quiet（形容詞）を修飾するので副詞 surprisingly。",
+    "trap": "surprised/surprising は形容詞で置き方が不自然。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-014",
+    "sentence": "Employees must submit their requests _____ Friday.",
+    "choices": [
+      "until",
+      "by",
+      "during",
+      "while"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "接続詞"
+    ],
+    "answer": 1,
+    "explanation": "期限は by + 日付。",
+    "trap": "while は接続詞で名詞の前に単独では置けません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-015",
+    "sentence": "The package was delivered _____ Mr. Tanaka yesterday.",
+    "choices": [
+      "to",
+      "for",
+      "with",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 3,
+    "explanation": "受動態で動作主（誰が）を表すのは by。",
+    "trap": "to は到達点（宛先）。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-016",
+    "sentence": "The report was submitted _____ the deadline.",
+    "choices": [
+      "before",
+      "early",
+      "earlier",
+      "soon"
+    ],
+    "choicePos": [
+      "前置詞",
+      "副詞",
+      "副詞/形容詞",
+      "副詞"
+    ],
+    "answer": 0,
+    "explanation": "deadline（名詞）の前は前置詞 before。",
+    "trap": "early は副詞で単独使用が基本。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-017",
+    "sentence": "The meeting was postponed _____ the storm.",
+    "choices": [
+      "because",
+      "because of",
+      "although",
+      "while"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "接続詞",
+      "接続詞"
+    ],
+    "answer": 1,
+    "explanation": "the storm（名詞句）なので because of が必要です。",
+    "trap": "because は文（S+V）が必要。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-018",
+    "sentence": "Please reply _____ this email as soon as possible.",
+    "choices": [
+      "for",
+      "to",
+      "at",
+      "with"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "reply to + 名詞 が定型。",
+    "trap": "reply for は不自然。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-019",
+    "sentence": "The contract must be signed _____ both parties.",
+    "choices": [
+      "by",
+      "with",
+      "from",
+      "at"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "受動態の動作主は by。",
+    "trap": "with は手段・付帯。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-020",
+    "sentence": "The schedule was changed _____ short notice.",
+    "choices": [
+      "at",
+      "in",
+      "on",
+      "for"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 2,
+    "explanation": "on short notice（急な通知で）は頻出の定型表現。",
+    "trap": "at/in はこの熟語では使いません。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-021",
+    "sentence": "The documents were prepared _____ advance.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "in advance は決まり文句。",
+    "trap": "on advance は誤り。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-022",
+    "sentence": "The conference will be held _____ the main auditorium.",
+    "choices": [
+      "in",
+      "at",
+      "on",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "会場（空間）に『中で』→ in が自然。",
+    "trap": "at は点としての場所。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-023",
+    "sentence": "The train arrives _____ 7:30 p.m.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 2,
+    "explanation": "時刻は at + 時刻。",
+    "trap": "by は『〜までに』で意味が変わります。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-024",
+    "sentence": "We will start the meeting on time _____ some members are late.",
+    "choices": [
+      "because",
+      "although",
+      "because of",
+      "despite"
+    ],
+    "choicePos": [
+      "接続詞",
+      "接続詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "後ろが文（S+V）なので接続詞 although。",
+    "trap": "despite の後ろは名詞が基本。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-025",
+    "sentence": "The event was canceled _____ the heavy rain.",
+    "choices": [
+      "although",
+      "because",
+      "because of",
+      "while"
+    ],
+    "choicePos": [
+      "接続詞",
+      "接続詞",
+      "前置詞",
+      "接続詞"
+    ],
+    "answer": 2,
+    "explanation": "名詞句 the heavy rain の前は because of。",
+    "trap": "because は文が必要。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-026",
+    "sentence": "_____ the traffic, we arrived on time.",
+    "choices": [
+      "Because",
+      "Because of",
+      "Although",
+      "While"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "接続詞",
+      "接続詞"
+    ],
+    "answer": 1,
+    "explanation": "後ろが名詞句 the traffic なので Because of が正解。",
+    "trap": "Because の後ろは文。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-027",
+    "sentence": "Please contact _____ if you have any questions.",
+    "choices": [
+      "we",
+      "our",
+      "us",
+      "ours"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "所有格（形容詞的）",
+      "代名詞（目的格）",
+      "所有代名詞"
+    ],
+    "answer": 2,
+    "explanation": "contact（動詞）の目的語は目的格 us。",
+    "trap": "we は主格。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-028",
+    "sentence": "_____ manager will review your application.",
+    "choices": [
+      "We",
+      "Us",
+      "Our",
+      "Ours"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 2,
+    "explanation": "manager（名詞）を修飾するのは所有格（形容詞的）our。",
+    "trap": "ours は名詞の代わり。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-029",
+    "sentence": "The new software offers many features, and _____ are easy to use.",
+    "choices": [
+      "they",
+      "them",
+      "their",
+      "theirs"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 0,
+    "explanation": "are の主語なので主格 they。",
+    "trap": "them は目的格。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-030",
+    "sentence": "The employee _____ submitted the report will receive a bonus.",
+    "choices": [
+      "who",
+      "whom",
+      "which",
+      "what"
+    ],
+    "choicePos": [
+      "関係代名詞（主格）",
+      "関係代名詞（目的格）",
+      "関係代名詞",
+      "疑問詞/関係詞"
+    ],
+    "answer": 0,
+    "explanation": "先行詞 employee（人）で、後ろの動詞 submitted の主語→ who。",
+    "trap": "whom は目的格。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-031",
+    "sentence": "The report _____ you requested has been completed.",
+    "choices": [
+      "who",
+      "whom",
+      "which",
+      "where"
+    ],
+    "choicePos": [
+      "関係代名詞",
+      "関係代名詞",
+      "関係代名詞",
+      "関係副詞"
+    ],
+    "answer": 2,
+    "explanation": "先行詞 report（物）なので which。",
+    "trap": "where は場所。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-032",
+    "sentence": "The new model is _____ expensive than the previous one.",
+    "choices": [
+      "more",
+      "most",
+      "many",
+      "much"
+    ],
+    "choicePos": [
+      "比較級",
+      "最上級",
+      "数量（可算）",
+      "数量（不可算）"
+    ],
+    "answer": 0,
+    "explanation": "形容詞 expensive の比較級は more + 形容詞。",
+    "trap": "most は最上級。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-033",
+    "sentence": "There are _____ applicants this year than last year.",
+    "choices": [
+      "many",
+      "more",
+      "most",
+      "much"
+    ],
+    "choicePos": [
+      "数量（可算）",
+      "比較級",
+      "最上級",
+      "数量（不可算）"
+    ],
+    "answer": 1,
+    "explanation": "than があるので比較級 more。",
+    "trap": "many は比較になっていません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-034",
+    "sentence": "We received _____ information about the new policy.",
+    "choices": [
+      "many",
+      "much",
+      "more",
+      "most"
+    ],
+    "choicePos": [
+      "数量（可算）",
+      "数量（不可算）",
+      "比較級",
+      "最上級"
+    ],
+    "answer": 1,
+    "explanation": "information は不可算名詞なので much。",
+    "trap": "many は可算名詞向け。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-035",
+    "sentence": "Only a _____ of customers responded to the survey.",
+    "choices": [
+      "few",
+      "little",
+      "number",
+      "amount"
+    ],
+    "choicePos": [
+      "数量形容詞（可算）",
+      "数量形容詞（不可算）",
+      "名詞（可算）",
+      "名詞（不可算）"
+    ],
+    "answer": 2,
+    "explanation": "a number of + 可算複数（customers）。",
+    "trap": "amount は不可算向け。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-036",
+    "sentence": "The company showed a _____ increase in profits.",
+    "choices": [
+      "significance",
+      "significantly",
+      "significant",
+      "signify"
+    ],
+    "choicePos": [
+      "名詞",
+      "副詞",
+      "形容詞",
+      "動詞"
+    ],
+    "answer": 2,
+    "explanation": "increase（名詞）を修飾するので形容詞 significant。",
+    "trap": "significantly は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-037",
+    "sentence": "The report contains _____ information for new employees.",
+    "choices": [
+      "value",
+      "valuable",
+      "valuably",
+      "valuation"
+    ],
+    "choicePos": [
+      "名詞/動詞",
+      "形容詞",
+      "副詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "information（名詞）を修飾する形容詞 valuable。",
+    "trap": "value は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-038",
+    "sentence": "We appreciate your _____ cooperation.",
+    "choices": [
+      "kind",
+      "kindly",
+      "kindness",
+      "kinder"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "比較級"
+    ],
+    "answer": 0,
+    "explanation": "cooperation（名詞）を修飾する形容詞 kind。",
+    "trap": "kindly は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-039",
+    "sentence": "The company will _____ its operations overseas.",
+    "choices": [
+      "expansion",
+      "expansive",
+      "expand",
+      "expanded"
+    ],
+    "choicePos": [
+      "名詞",
+      "形容詞",
+      "動詞（原形）",
+      "過去形/過去分詞"
+    ],
+    "answer": 2,
+    "explanation": "will の後ろは動詞の原形 expand。",
+    "trap": "expansion は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-040",
+    "sentence": "The advertisement was designed to attract _____ customers.",
+    "choices": [
+      "potential",
+      "potentially",
+      "potentiality",
+      "potentials"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞（複数）"
+    ],
+    "answer": 0,
+    "explanation": "customers（名詞）を修飾する形容詞 potential。",
+    "trap": "potentially は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-041",
+    "sentence": "We will postpone the launch _____ we receive final approval.",
+    "choices": [
+      "because",
+      "until",
+      "despite",
+      "during"
+    ],
+    "choicePos": [
+      "接続詞",
+      "接続詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "後ろが文（we receive...）で『〜まで』→ until。",
+    "trap": "during は名詞が必要。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-042",
+    "sentence": "The printer stopped working _____ it ran out of ink.",
+    "choices": [
+      "because",
+      "because of",
+      "despite",
+      "during"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "後ろが文（it ran...）なので because。",
+    "trap": "because of は名詞句。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-043",
+    "sentence": "_____ the long meeting, we finished all agenda items.",
+    "choices": [
+      "During",
+      "Because",
+      "Although",
+      "Unless"
+    ],
+    "choicePos": [
+      "前置詞",
+      "接続詞",
+      "接続詞",
+      "接続詞"
+    ],
+    "answer": 0,
+    "explanation": "the long meeting（名詞句）なので During。",
+    "trap": "Because の後ろは文。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-044",
+    "sentence": "The technician explained the procedure _____ .",
+    "choices": [
+      "patient",
+      "patiently",
+      "patience",
+      "patients"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞（複数）"
+    ],
+    "answer": 1,
+    "explanation": "explained（動詞）を修飾する副詞 patiently。",
+    "trap": "patient は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-045",
+    "sentence": "The brochure was printed on _____ paper.",
+    "choices": [
+      "recycle",
+      "recycled",
+      "recycling",
+      "recyclable"
+    ],
+    "choicePos": [
+      "動詞",
+      "形容詞（過去分詞）",
+      "動名詞/現在分詞",
+      "形容詞"
+    ],
+    "answer": 1,
+    "explanation": "paper（名詞）を修飾する形容詞 recycled。",
+    "trap": "recycling は動名詞。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-046",
+    "sentence": "The speaker talked _____ about the new strategy.",
+    "choices": [
+      "enthusiastic",
+      "enthusiasm",
+      "enthusiastically",
+      "enthuse"
+    ],
+    "choicePos": [
+      "形容詞",
+      "名詞",
+      "副詞",
+      "動詞"
+    ],
+    "answer": 2,
+    "explanation": "talked（動詞）を修飾する副詞 enthusiastically。",
+    "trap": "enthusiasm は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-047",
+    "sentence": "The company is _____ known for its innovation.",
+    "choices": [
+      "wide",
+      "widely",
+      "width",
+      "widen"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "動詞"
+    ],
+    "answer": 1,
+    "explanation": "known（形容詞/分詞）を修飾する副詞 widely。",
+    "trap": "wide は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-048",
+    "sentence": "The guidelines are _____ simple for beginners.",
+    "choices": [
+      "sufficient",
+      "sufficiently",
+      "sufficiency",
+      "suffice"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "動詞"
+    ],
+    "answer": 1,
+    "explanation": "simple（形容詞）を修飾する副詞 sufficiently。",
+    "trap": "sufficient は形容詞。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-049",
+    "sentence": "Please send the invoice _____ email.",
+    "choices": [
+      "by",
+      "with",
+      "on",
+      "from"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "手段は by email が定型。",
+    "trap": "with email は不自然。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-050",
+    "sentence": "The seminar will take place _____ Monday morning.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "曜日は on。",
+    "trap": "in は月・年など。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-051",
+    "sentence": "The office is located _____ the third floor.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "to"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "階は on the third floor。",
+    "trap": "in は空間内。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-052",
+    "sentence": "The flight was delayed _____ technical issues.",
+    "choices": [
+      "because",
+      "because of",
+      "although",
+      "unless"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "接続詞",
+      "接続詞"
+    ],
+    "answer": 1,
+    "explanation": "technical issues（名詞句）なので because of。",
+    "trap": "because は文が必要。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-053",
+    "sentence": "The manager will be in Tokyo _____ three days.",
+    "choices": [
+      "since",
+      "for",
+      "during",
+      "by"
+    ],
+    "choicePos": [
+      "接続詞/前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "期間は for + 期間。",
+    "trap": "since は起点。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-054",
+    "sentence": "Please give the documents to _____ .",
+    "choices": [
+      "I",
+      "me",
+      "my",
+      "mine"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 1,
+    "explanation": "to（前置詞）の後ろは目的格 me。",
+    "trap": "I は主格。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-055",
+    "sentence": "The manager praised _____ for the excellent work.",
+    "choices": [
+      "they",
+      "them",
+      "their",
+      "theirs"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 1,
+    "explanation": "praised（動詞）の目的語は them。",
+    "trap": "they は主格。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-056",
+    "sentence": "_____ proposal was selected as the best one.",
+    "choices": [
+      "We",
+      "Us",
+      "Our",
+      "Ours"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 2,
+    "explanation": "proposal（名詞）を修飾するのは our。",
+    "trap": "ours は名詞の代わり。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-057",
+    "sentence": "The applicant _____ resume impressed the team was hired.",
+    "choices": [
+      "who",
+      "whose",
+      "which",
+      "what"
+    ],
+    "choicePos": [
+      "関係代名詞",
+      "関係代名詞（所有）",
+      "関係代名詞",
+      "疑問詞/関係詞"
+    ],
+    "answer": 1,
+    "explanation": "resume（名詞）を所有でつなぐので whose。",
+    "trap": "who は人の主格。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-058",
+    "sentence": "This is the office _____ we held the workshop.",
+    "choices": [
+      "which",
+      "where",
+      "who",
+      "what"
+    ],
+    "choicePos": [
+      "関係代名詞",
+      "関係副詞",
+      "関係代名詞",
+      "疑問詞/関係詞"
+    ],
+    "answer": 1,
+    "explanation": "場所なので where。",
+    "trap": "which は目的語としての物。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-059",
+    "sentence": "There is _____ time left before the deadline.",
+    "choices": [
+      "few",
+      "a few",
+      "little",
+      "many"
+    ],
+    "choicePos": [
+      "数量形容詞（可算）",
+      "数量形容詞（可算）",
+      "数量形容詞（不可算）",
+      "数量（可算）"
+    ],
+    "answer": 2,
+    "explanation": "time は不可算名詞なので little。",
+    "trap": "few/a few は可算向け。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-060",
+    "sentence": "We have _____ items in stock than last week.",
+    "choices": [
+      "many",
+      "more",
+      "much",
+      "most"
+    ],
+    "choicePos": [
+      "数量（可算）",
+      "比較級",
+      "数量（不可算）",
+      "最上級"
+    ],
+    "answer": 1,
+    "explanation": "than があるので比較級 more。",
+    "trap": "many は比較になりません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-061",
+    "sentence": "The software must _____ updated regularly.",
+    "choices": [
+      "be",
+      "being",
+      "been",
+      "is"
+    ],
+    "choicePos": [
+      "動詞（原形）",
+      "動名詞/現在分詞",
+      "過去分詞",
+      "be動詞（現在形）"
+    ],
+    "answer": 0,
+    "explanation": "must の後ろは原形 be。受動態で be updated。",
+    "trap": "is は現在形で助動詞と併用不可。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-062",
+    "sentence": "The documents have been _____ to the manager.",
+    "choices": [
+      "send",
+      "sent",
+      "sending",
+      "sender"
+    ],
+    "choicePos": [
+      "動詞（原形）",
+      "過去分詞",
+      "動名詞/現在分詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "have been + 過去分詞で受動態。",
+    "trap": "send は原形。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-063",
+    "sentence": "The company offers _____ benefits to its employees.",
+    "choices": [
+      "attract",
+      "attractive",
+      "attractively",
+      "attraction"
+    ],
+    "choicePos": [
+      "動詞",
+      "形容詞",
+      "副詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "benefits（名詞）を修飾する形容詞 attractive。",
+    "trap": "attractively は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-064",
+    "sentence": "The proposal was _____ reviewed by the committee.",
+    "choices": [
+      "careful",
+      "carefully",
+      "care",
+      "careless"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞/動詞",
+      "形容詞"
+    ],
+    "answer": 1,
+    "explanation": "reviewed（動詞）を修飾する副詞 carefully。",
+    "trap": "careful は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-065",
+    "sentence": "The office will remain _____ until renovations are complete.",
+    "choices": [
+      "close",
+      "closing",
+      "closed",
+      "closely"
+    ],
+    "choicePos": [
+      "動詞/形容詞",
+      "動名詞/現在分詞",
+      "形容詞（過去分詞）",
+      "副詞"
+    ],
+    "answer": 2,
+    "explanation": "remain の後ろは形容詞（状態）なので closed。",
+    "trap": "closely は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-066",
+    "sentence": "The contract includes _____ details about payment.",
+    "choices": [
+      "specify",
+      "specific",
+      "specifically",
+      "specification"
+    ],
+    "choicePos": [
+      "動詞",
+      "形容詞",
+      "副詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "details（名詞）を修飾する形容詞 specific。",
+    "trap": "specifically は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-067",
+    "sentence": "The assistant responded _____ to the client’s request.",
+    "choices": [
+      "prompt",
+      "promptly",
+      "promptness",
+      "prompted"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "過去形/過去分詞"
+    ],
+    "answer": 1,
+    "explanation": "responded（動詞）を修飾する副詞 promptly。",
+    "trap": "prompt は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-068",
+    "sentence": "The company has shown _____ growth over the past year.",
+    "choices": [
+      "steady",
+      "steadily",
+      "steadiness",
+      "stead"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 0,
+    "explanation": "growth（名詞）を修飾する形容詞 steady。",
+    "trap": "steadily は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-069",
+    "sentence": "Employees are expected to behave _____ at all times.",
+    "choices": [
+      "professional",
+      "professionally",
+      "profession",
+      "professionalism"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "behave（動詞）を修飾する副詞 professionally。",
+    "trap": "professional は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-070",
+    "sentence": "The product was _____ tested before release.",
+    "choices": [
+      "thorough",
+      "thoroughly",
+      "thoroughness",
+      "thoroughfare"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "tested（動詞）を修飾する副詞 thoroughly。",
+    "trap": "thorough は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-071",
+    "sentence": "The employee responded _____ to the feedback.",
+    "choices": [
+      "positive",
+      "positively",
+      "positivity",
+      "position"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "responded（動詞）を修飾する副詞 positively。",
+    "trap": "positive は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-072",
+    "sentence": "The manager made a _____ decision.",
+    "choices": [
+      "quick",
+      "quickly",
+      "quickness",
+      "quicken"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "動詞"
+    ],
+    "answer": 0,
+    "explanation": "decision（名詞）を修飾する形容詞 quick。",
+    "trap": "quickly は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-073",
+    "sentence": "The company has a _____ reputation in the industry.",
+    "choices": [
+      "strong",
+      "strongly",
+      "strength",
+      "strengthen"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "動詞"
+    ],
+    "answer": 0,
+    "explanation": "reputation（名詞）を修飾する形容詞 strong。",
+    "trap": "strongly は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-074",
+    "sentence": "The manager expressed her opinion _____ .",
+    "choices": [
+      "honest",
+      "honestly",
+      "honesty",
+      "honestness"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "expressed（動詞）を修飾する副詞 honestly。",
+    "trap": "honest は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-075",
+    "sentence": "The assistant completed the task _____ .",
+    "choices": [
+      "efficient",
+      "efficiency",
+      "efficiently",
+      "efficientness"
+    ],
+    "choicePos": [
+      "形容詞",
+      "名詞",
+      "副詞",
+      "名詞"
+    ],
+    "answer": 2,
+    "explanation": "completed（動詞）を修飾する副詞 efficiently。",
+    "trap": "efficient は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-076",
+    "sentence": "We will proceed with the plan _____ the budget is approved.",
+    "choices": [
+      "once",
+      "during",
+      "because of",
+      "despite"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "後ろが文なので接続詞 once（〜したら）。",
+    "trap": "during/despite は名詞句向け。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-077",
+    "sentence": "The manager will attend the meeting _____ he is in Osaka.",
+    "choices": [
+      "if",
+      "for",
+      "because of",
+      "during"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "後ろが文（he is...）なので接続詞 if。",
+    "trap": "for は名詞句向け。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-078",
+    "sentence": "The team is responsible _____ updating the website.",
+    "choices": [
+      "for",
+      "to",
+      "with",
+      "at"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "responsible for が定型。",
+    "trap": "responsible to は意味が変わります。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-079",
+    "sentence": "The customer complained _____ the delay.",
+    "choices": [
+      "about",
+      "to",
+      "for",
+      "with"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "complain about + 名詞。",
+    "trap": "complain to は相手。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-080",
+    "sentence": "The speaker apologized _____ the mistake.",
+    "choices": [
+      "for",
+      "to",
+      "at",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "apologize for + 名詞。",
+    "trap": "apologize to は相手。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-081",
+    "sentence": "We need your _____ before we can proceed.",
+    "choices": [
+      "approve",
+      "approved",
+      "approval",
+      "approving"
+    ],
+    "choicePos": [
+      "動詞",
+      "形容詞/過去分詞",
+      "名詞",
+      "動名詞/現在分詞"
+    ],
+    "answer": 2,
+    "explanation": "your の後ろは名詞 approval。",
+    "trap": "approve は動詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-082",
+    "sentence": "The company will _____ a new policy next week.",
+    "choices": [
+      "announcement",
+      "announce",
+      "announced",
+      "announcing"
+    ],
+    "choicePos": [
+      "名詞",
+      "動詞（原形）",
+      "過去形/過去分詞",
+      "動名詞/現在分詞"
+    ],
+    "answer": 1,
+    "explanation": "will の後ろは動詞原形 announce。",
+    "trap": "announcement は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-083",
+    "sentence": "The board made a _____ decision regarding the merger.",
+    "choices": [
+      "final",
+      "finally",
+      "finalize",
+      "finality"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "動詞",
+      "名詞"
+    ],
+    "answer": 0,
+    "explanation": "decision（名詞）を修飾する形容詞 final。",
+    "trap": "finally は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-084",
+    "sentence": "The client to _____ you spoke yesterday called again.",
+    "choices": [
+      "who",
+      "whom",
+      "which",
+      "what"
+    ],
+    "choicePos": [
+      "関係代名詞",
+      "関係代名詞（目的格）",
+      "関係代名詞",
+      "疑問詞/関係詞"
+    ],
+    "answer": 1,
+    "explanation": "前置詞 to の目的語なので whom。",
+    "trap": "who は主格。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-085",
+    "sentence": "The documents are on the desk. Please take _____ .",
+    "choices": [
+      "it",
+      "them",
+      "they",
+      "their"
+    ],
+    "choicePos": [
+      "代名詞（単数）",
+      "代名詞（複数目的格）",
+      "代名詞（複数主格）",
+      "所有格（形容詞的）"
+    ],
+    "answer": 1,
+    "explanation": "documents（複数）なので them。",
+    "trap": "they は主格。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-086",
+    "sentence": "The new schedule takes effect _____ April 1.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "日付は on + 日付。",
+    "trap": "in は月・年。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-087",
+    "sentence": "We will contact you _____ we receive the final results.",
+    "choices": [
+      "as soon as",
+      "during",
+      "because of",
+      "despite"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "後ろが文なので接続詞 as soon as。",
+    "trap": "during は名詞句向け。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-088",
+    "sentence": "The employee is known _____ her attention to detail.",
+    "choices": [
+      "for",
+      "to",
+      "with",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "known for が定型。",
+    "trap": "known to は『〜に知られている』。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-089",
+    "sentence": "The manager asked _____ to submit the form by noon.",
+    "choices": [
+      "we",
+      "us",
+      "our",
+      "ours"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 1,
+    "explanation": "asked（動詞）の目的語なので us。",
+    "trap": "we は主格。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-090",
+    "sentence": "This is the reason _____ the meeting was postponed.",
+    "choices": [
+      "why",
+      "which",
+      "who",
+      "where"
+    ],
+    "choicePos": [
+      "関係副詞",
+      "関係代名詞",
+      "関係代名詞",
+      "関係副詞"
+    ],
+    "answer": 0,
+    "explanation": "reason に続くのは why が自然。",
+    "trap": "where は場所。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-091",
+    "sentence": "The training session is _____ for all new employees.",
+    "choices": [
+      "require",
+      "required",
+      "requirement",
+      "requiring"
+    ],
+    "choicePos": [
+      "動詞",
+      "形容詞（過去分詞）",
+      "名詞",
+      "動名詞/現在分詞"
+    ],
+    "answer": 1,
+    "explanation": "be動詞の後ろで状態→ required。",
+    "trap": "requirement は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-092",
+    "sentence": "The company’s decision was _____ influenced by market trends.",
+    "choices": [
+      "strong",
+      "strongly",
+      "strength",
+      "strengthen"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "動詞"
+    ],
+    "answer": 1,
+    "explanation": "influenced（動詞）を修飾する副詞 strongly。",
+    "trap": "strong は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-093",
+    "sentence": "The receptionist greeted the visitors _____ .",
+    "choices": [
+      "warm",
+      "warmly",
+      "warmth",
+      "warmer"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "比較級"
+    ],
+    "answer": 1,
+    "explanation": "greeted（動詞）を修飾する副詞 warmly。",
+    "trap": "warm は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-094",
+    "sentence": "The report was finished _____ than expected.",
+    "choices": [
+      "quick",
+      "quickly",
+      "quicker",
+      "quickness"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "比較級",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "finished（動詞）を修飾する副詞 quickly。",
+    "trap": "quicker は比較級で形が不自然。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-095",
+    "sentence": "The results were _____ surprising to the team.",
+    "choices": [
+      "extreme",
+      "extremely",
+      "extremity",
+      "extremism"
+    ],
+    "choicePos": [
+      "形容詞",
+      "副詞",
+      "名詞",
+      "名詞"
+    ],
+    "answer": 1,
+    "explanation": "surprising（形容詞）を修飾する副詞 extremely。",
+    "trap": "extreme は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-096",
+    "sentence": "The new schedule takes effect _____ April 1.",
+    "choices": [
+      "in",
+      "on",
+      "at",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 1,
+    "explanation": "日付は on + 日付。",
+    "trap": "in は月・年。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-097",
+    "sentence": "We will contact you _____ we receive the final results.",
+    "choices": [
+      "as soon as",
+      "during",
+      "because of",
+      "despite"
+    ],
+    "choicePos": [
+      "接続詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "後ろが文なので接続詞 as soon as。",
+    "trap": "during は名詞句向け。",
+    "difficulty": 3
+  },
+  {
+    "id": "pos-098",
+    "sentence": "The employee is known _____ her attention to detail.",
+    "choices": [
+      "for",
+      "to",
+      "with",
+      "by"
+    ],
+    "choicePos": [
+      "前置詞",
+      "前置詞",
+      "前置詞",
+      "前置詞"
+    ],
+    "answer": 0,
+    "explanation": "known for が定型。",
+    "trap": "known to は『〜に知られている』。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-099",
+    "sentence": "The manager asked _____ to submit the form by noon.",
+    "choices": [
+      "we",
+      "us",
+      "our",
+      "ours"
+    ],
+    "choicePos": [
+      "代名詞（主格）",
+      "代名詞（目的格）",
+      "所有格（形容詞的）",
+      "所有代名詞"
+    ],
+    "answer": 1,
+    "explanation": "asked（動詞）の目的語なので us。",
+    "trap": "we は主格。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-100",
+    "sentence": "This is the reason _____ the meeting was postponed.",
+    "choices": [
+      "why",
+      "which",
+      "who",
+      "where"
+    ],
+    "choicePos": [
+      "関係副詞",
+      "関係代名詞",
+      "関係代名詞",
+      "関係副詞"
+    ],
+    "answer": 0,
+    "explanation": "reason に続くのは why が自然。",
+    "trap": "where は場所。",
+    "difficulty": 2
+  }
+]

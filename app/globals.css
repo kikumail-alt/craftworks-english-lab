@@ -1,26 +1,120 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* =========================================================
+   Base (UI)
+   ========================================================= */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+main {
+  padding: 24px;
+}
+
+/* =========================================================
+   TOEIC-like English (REAL TEST LOOK)
+   ========================================================= */
+.question,
+.choice span:last-child {
+  font-family: "Times New Roman", Times, "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-weight: 400;              /* 太字禁止（TOEIC準拠） */
+  letter-spacing: 0;
+}
+
+/* 問題文（主役） */
+.question {
+  font-size: 1.55rem;
+  line-height: 1.6;
+  margin: 6px 0 4px;
+}
+
+/* 選択肢本文 */
+.choice span:last-child {
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   Choices layout
+   ========================================================= */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* A / B / C / D (弱く) */
+.choice span:first-child {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.55;
+  min-width: 1.4em;
+  text-align: right;
+}
+
+/* =========================================================
+   Eye-friendly low contrast theme
+   ========================================================= */
+body.theme-low {
+  background-color: #2a2a2a;
+  color: #e6e6e6;
+}
+
+body.theme-low .choice {
+  background-color: #3a3a3a;
+  border-color: #666;
+}
+
+body.theme-low .choice.correct {
+  background-color: #5fa96a;
+  border-color: #3f7f4a;
+  color: #ffffff;
+}
+
+body.theme-low .choice.wrong {
+  background-color: #d06a6a;
+  border-color: #9a3f3f;
+  color: #ffffff;
+}
+
+/* =========================================================
+   Cards / Explanation
+   ========================================================= */
+.card {
+  border: 1px solid #666;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.explanation {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #d0d0d0;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+body.theme-low footer {
+  color: #bbb;
 }

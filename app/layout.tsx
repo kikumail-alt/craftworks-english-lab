@@ -1,4 +1,5 @@
 import "./globals.css";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 export const metadata = {
   title: "craftworks-english-lab",
@@ -11,8 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+    <html lang="ja">
+      <body>
+        <ThemeSwitch />
         {children}
       </body>
     </html>

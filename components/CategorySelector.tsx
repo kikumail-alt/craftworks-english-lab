@@ -1,27 +1,28 @@
 "use client";
+
 import { CATEGORIES, type CategoryId } from "@/lib/categories";
 
 export default function CategorySelector({
-  selected,
-  setSelected,
+  value,
+  onChange,
 }: {
-  selected: CategoryId[];
-  setSelected: (v: CategoryId[]) => void;
+  value: Set<CategoryId>;
+  onChange: (next: Set<CategoryId>) => void;
 }) {
-  const toggle = (id: CategoryId) =>
-    setSelected(
-      selected.includes(id)
-        ? selected.filter((x) => x !== id)
-        : [...selected, id]
-    );
+  function toggle(id: CategoryId) {
+    const next = new Set(value);
+    if (next.has(id)) next.delete(id);
+    else next.add(id);
+    onChange(next);
+  }
 
   return (
-    <div className="grid gap-2">
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
       {CATEGORIES.map((c) => (
-        <label key={c.id} className="flex items-center gap-2">
+        <label key={c.id} style={{ display: "flex", alignItems: "center", gap: 6 }}>
           <input
             type="checkbox"
-            checked={selected.includes(c.id)}
+            checked={value.has(c.id)}
             onChange={() => toggle(c.id)}
           />
           <span>{c.label}</span>

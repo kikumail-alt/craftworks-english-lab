@@ -1,0 +1,202 @@
+[
+  {
+    "id": "pos-01",
+    "sentence": "The new policy will _____ effective next month.",
+    "choices": ["be", "being", "been", "is"],
+    "choicePos": ["動詞（原形）", "動名詞/現在分詞", "過去分詞", "be動詞（現在形）"],
+    "answer": 0,
+    "explanation": "助動詞 will の直後は動詞の原形が必要です。effective（形容詞）を補語に取るので「will be effective」が正しい形です。",
+    "trap": "being は動名詞/分詞、been は過去分詞で will の直後に置けません。is は現在形で will と共存できません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-02",
+    "sentence": "Ms. Brown is _____ responsible for managing the project.",
+    "choices": ["complete", "completely", "completeness", "completing"],
+    "choicePos": ["形容詞", "副詞", "名詞", "動名詞/現在分詞"],
+    "answer": 1,
+    "explanation": "形容詞 responsible を修飾するため、副詞 completely が必要です。",
+    "trap": "complete は形容詞で修飾できません。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-03",
+    "sentence": "The report was submitted _____ the deadline.",
+    "choices": ["before", "early", "earlier", "soon"],
+    "choicePos": ["前置詞", "副詞", "副詞/形容詞（比較）", "副詞"],
+    "answer": 0,
+    "explanation": "deadline（名詞）の前に来るため、前置詞 before が正解です。",
+    "trap": "early / earlier は副詞（earlier は形容詞にもなる）。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-04",
+    "sentence": "Employees must submit their requests _____ Friday.",
+    "choices": ["until", "by", "during", "while"],
+    "choicePos": ["前置詞", "前置詞", "前置詞", "接続詞"],
+    "answer": 1,
+    "explanation": "期限を表す前置詞は by です。",
+    "trap": "while は接続詞なので名詞 Friday の前に単独では置けない。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-05",
+    "sentence": "The manager spoke _____ about the company’s future plans.",
+    "choices": ["confident", "confidence", "confidently", "confide"],
+    "choicePos": ["形容詞", "名詞", "副詞", "動詞"],
+    "answer": 2,
+    "explanation": "動詞 spoke を修飾するため、副詞 confidently が正解です。",
+    "trap": "confidence は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-06",
+    "sentence": "The new software is _____ to install and use.",
+    "choices": ["ease", "easy", "easily", "easiness"],
+    "choicePos": ["名詞/動詞", "形容詞", "副詞", "名詞"],
+    "answer": 1,
+    "explanation": "be動詞の後ろには形容詞 easy が来ます。",
+    "trap": "easily は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-07",
+    "sentence": "All applicants must have _____ experience in marketing.",
+    "choices": ["relate", "relation", "related", "relatively"],
+    "choicePos": ["動詞", "名詞", "形容詞（過去分詞）", "副詞"],
+    "answer": 2,
+    "explanation": "名詞 experience を修飾するため、形容詞 related が正解です。",
+    "trap": "relation は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-08",
+    "sentence": "The meeting was canceled due to _____ weather conditions.",
+    "choices": ["severe", "severely", "severity", "severed"],
+    "choicePos": ["形容詞", "副詞", "名詞", "動詞（過去形/過去分詞）"],
+    "answer": 0,
+    "explanation": "名詞 weather を修飾する形容詞 severe が正解です。",
+    "trap": "severely は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-09",
+    "sentence": "The brochure provides _____ information about the product.",
+    "choices": ["detail", "detailed", "detailing", "details"],
+    "choicePos": ["名詞/動詞", "形容詞（過去分詞）", "動名詞/現在分詞", "名詞（複数）"],
+    "answer": 1,
+    "explanation": "名詞 information を修飾する形容詞 detailed が正解です。",
+    "trap": "details は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-10",
+    "sentence": "The contract must be signed _____ both parties.",
+    "choices": ["by", "with", "from", "at"],
+    "choicePos": ["前置詞", "前置詞", "前置詞", "前置詞"],
+    "answer": 0,
+    "explanation": "受動態で動作主を表す前置詞は by です。",
+    "trap": "with は手段・付帯。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-11",
+    "sentence": "The assistant answered the phone _____ .",
+    "choices": ["polite", "politely", "politeness", "politest"],
+    "choicePos": ["形容詞", "副詞", "名詞", "形容詞（最上級）"],
+    "answer": 1,
+    "explanation": "動詞 answered を修飾する副詞 politely が正解です。",
+    "trap": "polite は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-12",
+    "sentence": "The company plans to _____ its operations overseas.",
+    "choices": ["expansion", "expansive", "expand", "expanded"],
+    "choicePos": ["名詞", "形容詞", "動詞", "動詞（過去形/過去分詞）"],
+    "answer": 2,
+    "explanation": "to の後ろには動詞の原形 expand が来ます。",
+    "trap": "expansion は名詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-13",
+    "sentence": "The schedule was changed _____ short notice.",
+    "choices": ["at", "in", "on", "for"],
+    "choicePos": ["前置詞", "前置詞", "前置詞", "前置詞"],
+    "answer": 2,
+    "explanation": "on short notice は決まり文句です。",
+    "trap": "形は全部前置詞なので、熟語で判断する問題。",
+    "difficulty": 2
+  },
+  {
+    "id": "pos-14",
+    "sentence": "The instructions were not _____ explained.",
+    "choices": ["clear", "clarity", "clearly", "clearness"],
+    "choicePos": ["形容詞", "名詞", "副詞", "名詞"],
+    "answer": 2,
+    "explanation": "動詞 explained を修飾するため、副詞 clearly が正解です。",
+    "trap": "clear は形容詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-15",
+    "sentence": "The proposal received _____ approval from the board.",
+    "choices": ["favor", "favorable", "favorably", "favoritism"],
+    "choicePos": ["名詞/動詞", "形容詞", "副詞", "名詞"],
+    "answer": 1,
+    "explanation": "名詞 approval を修飾する形容詞 favorable が正解です。",
+    "trap": "favorably は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-16",
+    "sentence": "Mr. Lee will be _____ for organizing the event.",
+    "choices": ["response", "responsive", "responsibly", "responsible"],
+    "choicePos": ["名詞", "形容詞", "副詞", "形容詞"],
+    "answer": 3,
+    "explanation": "be動詞の後ろなので形容詞 responsible が正解です。",
+    "trap": "responsibly は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-17",
+    "sentence": "The equipment must be checked _____ use.",
+    "choices": ["before", "during", "while", "since"],
+    "choicePos": ["前置詞", "前置詞", "接続詞", "前置詞/接続詞"],
+    "answer": 0,
+    "explanation": "use（名詞）の前なので前置詞 before が正解です。",
+    "trap": "while は接続詞で名詞の前に単独では置けない。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-18",
+    "sentence": "The advertisement was designed to attract _____ customers.",
+    "choices": ["potential", "potentially", "potentiality", "potentials"],
+    "choicePos": ["形容詞", "副詞", "名詞", "名詞（複数）"],
+    "answer": 0,
+    "explanation": "名詞 customers を修飾する形容詞 potential が正解です。",
+    "trap": "potentially は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-19",
+    "sentence": "The office will remain _____ until renovations are complete.",
+    "choices": ["close", "closing", "closed", "closely"],
+    "choicePos": ["動詞/形容詞", "動名詞/現在分詞", "形容詞（過去分詞）", "副詞"],
+    "answer": 2,
+    "explanation": "remain の後ろは形容詞 closed が来ます。",
+    "trap": "closely は副詞。",
+    "difficulty": 1
+  },
+  {
+    "id": "pos-20",
+    "sentence": "All employees are required to attend the _____ training session.",
+    "choices": ["mandatory", "mandate", "mandatorily", "mandating"],
+    "choicePos": ["形容詞", "名詞/動詞", "副詞", "動名詞/現在分詞"],
+    "answer": 0,
+    "explanation": "名詞 training session を修飾する形容詞 mandatory が正解です。",
+    "trap": "mandate は名詞/動詞、mandatorily は副詞。",
+    "difficulty": 1
+  }
+]
