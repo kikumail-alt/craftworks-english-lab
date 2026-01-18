@@ -1,0 +1,92 @@
+[
+  {
+    "id": "prep-001",
+    "sentence": "Please submit the report _____ Friday.",
+    "choices": ["at", "in", "by", "until"],
+    "answer": 2,
+    "explanation": "'By' indicates a deadline.",
+    "trap": "'Until' suggests the action continues up to Friday.",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-002",
+    "sentence": "The conference will be held _____ the main auditorium.",
+    "choices": ["at", "in", "on", "to"],
+    "answer": 1,
+    "explanation": "'In' is used for rooms/enclosed spaces.",
+    "trap": "'At' is possible for venues, but TOEIC often expects 'in' here.",
+    "difficulty": 2
+  },
+  {
+    "id": "prep-003",
+    "sentence": "You can find the schedule _____ the company website.",
+    "choices": ["in", "on", "at", "by"],
+    "answer": 1,
+    "explanation": "'On' is used for websites/pages.",
+    "trap": "'In' is a common mistake for web contexts.",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-004",
+    "sentence": "The package was delivered _____ Mr. Tanaka yesterday.",
+    "choices": ["to", "for", "with", "by"],
+    "answer": 0,
+    "explanation": "'Deliver to' indicates the receiver.",
+    "trap": "'By' indicates the agent (who delivered), not the receiver.",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-005",
+    "sentence": "Our office is located _____ the third floor.",
+    "choices": ["at", "in", "on", "by"],
+    "answer": 2,
+    "explanation": "'On the third floor' is the standard expression.",
+    "trap": "'In the third floor' is incorrect.",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-006",
+    "sentence": "The train arrives _____ 7:30 p.m.",
+    "choices": ["on", "at", "in", "to"],
+    "answer": 1,
+    "explanation": "Specific times use 'at'.",
+    "trap": "'On' is for days/dates.",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-007",
+    "sentence": "She has worked here _____ 2019.",
+    "choices": ["for", "since", "during", "from"],
+    "answer": 1,
+    "explanation": "'Since' is used with a starting point.",
+    "trap": "'For' needs a duration (e.g., for five years).",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-008",
+    "sentence": "The report is divided _____ three sections.",
+    "choices": ["into", "to", "in", "by"],
+    "answer": 0,
+    "explanation": "Divide something 'into' parts.",
+    "trap": "'In' is a frequent wrong choice.",
+    "difficulty": 2
+  },
+  {
+    "id": "prep-009",
+    "sentence": "Please send the file _____ email.",
+    "choices": ["by", "with", "in", "on"],
+    "answer": 0,
+    "explanation": "Common TOEIC expression: 'by email'.",
+    "trap": "'In email' is not natural.",
+    "difficulty": 1
+  },
+  {
+    "id": "prep-010",
+    "sentence": "The meeting was postponed _____ a power outage.",
+    "choices": ["because", "because of", "although", "unless"],
+    "answer": 1,
+    "explanation": "'Because of' + noun phrase.",
+    "trap": "'Because' must be followed by a clause.",
+    "difficulty": 2
+  }
+]
