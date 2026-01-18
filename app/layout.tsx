@@ -1,7 +1,9 @@
+cd ~/projects/craftworks-english-lab
+cat > app/layout.tsx << 'EOF'
 import "./globals.css";
-import ThemeSwitch from "@/components/ThemeSwitch";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "craftworks-english-lab",
   description: "TOEIC Part 5 Trainer",
 };
@@ -12,11 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <body>
-        <ThemeSwitch />
+    <html lang="ja" suppressHydrationWarning>
+      <body className="min-h-screen">
         {children}
       </body>
     </html>
   );
 }
+EOF
